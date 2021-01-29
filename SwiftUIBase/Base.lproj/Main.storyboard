@@ -30,7 +30,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axv-HL-AAj">
-                                                <rect key="frame" x="191" y="240" width="32" height="34"/>
+                                                <rect key="frame" x="108" y="240" width="200" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -41,7 +41,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Phc-9H-3vm">
-                                                <rect key="frame" x="191" y="335" width="32" height="34"/>
+                                                <rect key="frame" x="107" y="335" width="200" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -61,19 +61,21 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Phc-9H-3vm" firstAttribute="top" secondItem="pIP-x8-al8" secondAttribute="bottom" constant="20" id="4iq-tT-yaB"/>
+                                            <constraint firstItem="axv-HL-AAj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="kgD-r2-S8D" secondAttribute="leading" constant="108" id="5pU-rJ-Ubi"/>
                                             <constraint firstItem="NHF-0Q-JeE" firstAttribute="top" secondItem="kgD-r2-S8D" secondAttribute="top" constant="150" id="HHG-WE-tp6"/>
                                             <constraint firstItem="had-hT-pMU" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="KcS-U0-oJ9"/>
                                             <constraint firstItem="qBF-1N-cUT" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="OV2-zn-1Ua"/>
-                                            <constraint firstItem="axv-HL-AAj" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="Qoy-gB-v7R"/>
                                             <constraint firstItem="axv-HL-AAj" firstAttribute="top" secondItem="had-hT-pMU" secondAttribute="bottom" constant="20" id="R5G-Ds-Fof"/>
                                             <constraint firstItem="NHF-0Q-JeE" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="RiB-fg-Pve"/>
                                             <constraint firstItem="NHF-0Q-JeE" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="TEF-TP-rTg"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Phc-9H-3vm" secondAttribute="trailing" constant="107" id="Xcu-6J-oi3"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="axv-HL-AAj" secondAttribute="trailing" constant="106" id="YnK-ia-dwV"/>
                                             <constraint firstItem="had-hT-pMU" firstAttribute="top" secondItem="NHF-0Q-JeE" secondAttribute="bottom" constant="20" id="aoi-ga-GI5"/>
                                             <constraint firstItem="pIP-x8-al8" firstAttribute="top" secondItem="axv-HL-AAj" secondAttribute="bottom" constant="20" id="dbb-r1-ku8"/>
                                             <constraint firstAttribute="bottom" secondItem="qBF-1N-cUT" secondAttribute="bottom" constant="457" id="esU-c3-AzX"/>
                                             <constraint firstItem="qBF-1N-cUT" firstAttribute="top" secondItem="Phc-9H-3vm" secondAttribute="bottom" constant="40" id="hYD-DQ-xHz"/>
+                                            <constraint firstItem="Phc-9H-3vm" firstAttribute="leading" relation="lessThanOrEqual" secondItem="kgD-r2-S8D" secondAttribute="leading" constant="107" id="lxc-WJ-MJc"/>
                                             <constraint firstItem="pIP-x8-al8" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="nQ2-YV-RpB"/>
-                                            <constraint firstItem="Phc-9H-3vm" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="oEq-qg-UHT"/>
                                         </constraints>
                                     </view>
                                 </subviews>

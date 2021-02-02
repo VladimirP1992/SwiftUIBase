@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B464DC7325BF4CC80020A4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464DC7225BF4CC80020A4CE /* AppDelegate.swift */; };
-		B464DC7525BF4CC80020A4CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464DC7425BF4CC80020A4CE /* SceneDelegate.swift */; };
 		B464DC7725BF4CC80020A4CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464DC7625BF4CC80020A4CE /* ViewController.swift */; };
 		B464DC7A25BF4CC80020A4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B464DC7825BF4CC80020A4CE /* Main.storyboard */; };
 		B464DC7C25BF4CC80020A4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B464DC7B25BF4CC80020A4CE /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		B464DC6F25BF4CC80020A4CE /* SwiftUIBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B464DC7225BF4CC80020A4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B464DC7425BF4CC80020A4CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B464DC7625BF4CC80020A4CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B464DC7925BF4CC80020A4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B464DC7B25BF4CC80020A4CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				B464DC7225BF4CC80020A4CE /* AppDelegate.swift */,
-				B464DC7425BF4CC80020A4CE /* SceneDelegate.swift */,
 				B464DC7625BF4CC80020A4CE /* ViewController.swift */,
 				B464DC7825BF4CC80020A4CE /* Main.storyboard */,
 				B464DC7B25BF4CC80020A4CE /* Assets.xcassets */,
@@ -139,7 +136,6 @@
 			files = (
 				B464DC7725BF4CC80020A4CE /* ViewController.swift in Sources */,
 				B464DC7325BF4CC80020A4CE /* AppDelegate.swift in Sources */,
-				B464DC7525BF4CC80020A4CE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,14 @@ import UIKit
 
 class FriendsListCell: UITableViewCell {
 
+    @IBOutlet weak var friendName: UILabel!
+    @IBOutlet weak var friendAvatar: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

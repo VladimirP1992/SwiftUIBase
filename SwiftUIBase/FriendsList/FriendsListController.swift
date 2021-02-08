@@ -9,6 +9,11 @@ import UIKit
 
 class FriendsListController: UITableViewController {
 
+    var friends = [
+        User(name: "Vladimir", surname: "Ivanov", avatar: "vladimir_ava"),
+        User(name: "Olga", surname: "Petrova", avatar: "olga_ava")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,30 +22,31 @@ class FriendsListController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        self.tableView.register(UINib(nibName: "FriendsListCell", bundle: nil), forCellReuseIdentifier: "friendsListCell")
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return friends.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "friendsListCell", for: indexPath) as! FriendsListCell
 
-        // Configure the cell...
+        let fullName = "\(friends[indexPath.row].name) \(friends[indexPath.row].surname)"
+        cell.friendName.text = fullName
+        cell.friendAvatar.image = UIImage(named: friends[indexPath.row].avatar)
 
         return cell
     }
-    */
 
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -48,6 +54,10 @@ class FriendsListController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
     /*
     // Override to support editing the table view.

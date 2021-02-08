@@ -1,16 +1,14 @@
 //
-//  AllGroupsCell.swift
+//  GroupTableViewCell.swift
 //  SwiftUIBase
 //
-//  Created by Владимир Поливников on 05.02.2021.
+//  Created by Владимир Поливников on 08.02.2021.
 //
 
 import UIKit
 
-class AllGroupsCell: UITableViewCell {
+class GroupTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var groupName: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

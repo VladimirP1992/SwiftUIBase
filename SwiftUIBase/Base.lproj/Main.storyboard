@@ -124,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Mg0-g2-lmJ" customClass="MyGroupsCell" customModule="SwiftUIBase" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Mg0-g2-lmJ" customClass="GroupTableViewCell" customModule="SwiftUIBase" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mg0-g2-lmJ" id="KrY-7d-wAr">
@@ -139,7 +139,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Groups" id="C91-Ta-tMP">
-                        <barButtonItem key="rightBarButtonItem" title="Finde group" id="lWl-hr-cQF">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="lWl-hr-cQF">
                             <connections>
                                 <segue destination="PV1-KC-2Qo" kind="show" id="bu0-CQ-Fcu"/>
                             </connections>
@@ -159,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yMm-WY-f5s" customClass="AllGroupsCell" customModule="SwiftUIBase" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yMm-WY-f5s" customClass="GroupTableViewCell" customModule="SwiftUIBase" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yMm-WY-f5s" id="6ca-0w-xOk">
@@ -265,11 +265,11 @@
             </objects>
             <point key="canvasLocation" x="23.188405797101453" y="8.7053571428571423"/>
         </scene>
-        <!--Item 1-->
+        <!--Friends-->
         <scene sceneID="MOS-IJ-3Mg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="F6M-N5-oAc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="8ZN-nb-bPo"/>
+                    <tabBarItem key="tabBarItem" title="Friends" id="8ZN-nb-bPo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UeM-rB-6Pe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -284,11 +284,11 @@
             </objects>
             <point key="canvasLocation" x="917.39130434782612" y="-281.25"/>
         </scene>
-        <!--Item 2-->
+        <!--Groups-->
         <scene sceneID="gAv-hd-IG9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="EVW-SH-jU5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="MUN-QY-L9B"/>
+                    <tabBarItem key="tabBarItem" title="Groups" id="MUN-QY-L9B"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bQW-oO-gFE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -305,6 +305,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

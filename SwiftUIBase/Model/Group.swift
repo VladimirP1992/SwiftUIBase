@@ -9,5 +9,5 @@ import Foundation
 
 struct Group {
     var name: String
-    var subscribersCount: Int
+    var avatar: String
 }

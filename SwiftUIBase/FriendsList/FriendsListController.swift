@@ -46,6 +46,14 @@ class FriendsListController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "friendController") as! FriendController
+        vc.navigationItem.title = "\(friends[indexPath.row].name) \(friends[indexPath.row].surname)"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     /*
     // Override to support conditional editing of the table view.
@@ -54,10 +62,6 @@ class FriendsListController: UITableViewController {
         return true
     }
     */
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
 
     /*
     // Override to support editing the table view.

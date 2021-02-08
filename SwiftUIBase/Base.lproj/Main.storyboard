@@ -115,7 +115,7 @@
             </objects>
             <point key="canvasLocation" x="-707.24637681159425" y="8.7053571428571423"/>
         </scene>
-        <!--My Groups Controller-->
+        <!--My Groups-->
         <scene sceneID="FGc-at-aaE">
             <objects>
                 <tableViewController id="wpM-K8-xIV" customClass="MyGroupsController" customModule="SwiftUIBase" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,7 +138,7 @@
                             <outlet property="delegate" destination="wpM-K8-xIV" id="DZp-A5-20f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="C91-Ta-tMP">
+                    <navigationItem key="navigationItem" title="My Groups" id="C91-Ta-tMP">
                         <barButtonItem key="rightBarButtonItem" title="Finde group" id="lWl-hr-cQF">
                             <connections>
                                 <segue destination="PV1-KC-2Qo" kind="show" id="bu0-CQ-Fcu"/>
@@ -150,7 +150,7 @@
             </objects>
             <point key="canvasLocation" x="1784.057971014493" y="367.63392857142856"/>
         </scene>
-        <!--All Groups Controller-->
+        <!--Groups-->
         <scene sceneID="TQw-pe-U1N">
             <objects>
                 <tableViewController id="PV1-KC-2Qo" customClass="AllGroupsController" customModule="SwiftUIBase" customModuleProvider="target" sceneMemberID="viewController">
@@ -173,13 +173,13 @@
                             <outlet property="delegate" destination="PV1-KC-2Qo" id="3KQ-kW-bvK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="r8S-Rd-AVO"/>
+                    <navigationItem key="navigationItem" title="Groups" id="r8S-Rd-AVO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYX-Ch-5g5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2510.144927536232" y="367.63392857142856"/>
         </scene>
-        <!--Friends List Controller-->
+        <!--My Friends-->
         <scene sceneID="gvQ-5z-mCB">
             <objects>
                 <tableViewController id="wGm-m2-QOC" customClass="FriendsListController" customModule="SwiftUIBase" customModuleProvider="target" sceneMemberID="viewController">
@@ -205,7 +205,7 @@
                             <outlet property="delegate" destination="wGm-m2-QOC" id="SEn-4g-fAd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="RS5-hJ-XOK"/>
+                    <navigationItem key="navigationItem" title="My Friends" id="RS5-hJ-XOK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSY-uq-Hzl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

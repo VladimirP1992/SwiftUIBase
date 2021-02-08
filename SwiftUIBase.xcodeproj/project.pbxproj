@@ -24,6 +24,8 @@
 		B4A6FDC025CDE76D00E8AAB7 /* FriendsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A6FDBF25CDE76D00E8AAB7 /* FriendsListController.swift */; };
 		B4A6FDC425CDE79400E8AAB7 /* FriendsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A6FDC225CDE79400E8AAB7 /* FriendsListCell.swift */; };
 		B4A6FDC525CDE79400E8AAB7 /* FriendsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A6FDC325CDE79400E8AAB7 /* FriendsListCell.xib */; };
+		B4FB272A25D1A7B300C4D83B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FB272925D1A7B300C4D83B /* User.swift */; };
+		B4FB272D25D1A7C700C4D83B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FB272C25D1A7C600C4D83B /* Group.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		B4A6FDBF25CDE76D00E8AAB7 /* FriendsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListController.swift; sourceTree = "<group>"; };
 		B4A6FDC225CDE79400E8AAB7 /* FriendsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListCell.swift; sourceTree = "<group>"; };
 		B4A6FDC325CDE79400E8AAB7 /* FriendsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsListCell.xib; sourceTree = "<group>"; };
+		B4FB272925D1A7B300C4D83B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B4FB272C25D1A7C600C4D83B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		B464DC7125BF4CC80020A4CE /* SwiftUIBase */ = {
 			isa = PBXGroup;
 			children = (
+				B4FB272825D1A79600C4D83B /* Model */,
 				B4A6FDA525CDE11400E8AAB7 /* AllGroups */,
 				B4A6FDA425CDE0FF00E8AAB7 /* MyGroups */,
 				B4A6FDA325CDE0A200E8AAB7 /* Friend */,
@@ -130,6 +135,15 @@
 				B4A6FDAA25CDE5ED00E8AAB7 /* AllGroupsCell.xib */,
 			);
 			path = AllGroups;
+			sourceTree = "<group>";
+		};
+		B4FB272825D1A79600C4D83B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4FB272925D1A7B300C4D83B /* User.swift */,
+				B4FB272C25D1A7C600C4D83B /* Group.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +223,7 @@
 				B4A6FDC025CDE76D00E8AAB7 /* FriendsListController.swift in Sources */,
 				B4A6FDA725CDE59D00E8AAB7 /* AllGroupsController.swift in Sources */,
 				B4A6FDB825CDE6C800E8AAB7 /* FriendController.swift in Sources */,
+				B4FB272D25D1A7C700C4D83B /* Group.swift in Sources */,
 				B4A6FDB525CDE68900E8AAB7 /* MyGroupsController.swift in Sources */,
 				B4A6FDBC25CDE6EA00E8AAB7 /* FriendCell.swift in Sources */,
 				B4A6FDC425CDE79400E8AAB7 /* FriendsListCell.swift in Sources */,
@@ -216,6 +231,7 @@
 				B4A6FDB125CDE65000E8AAB7 /* MyGroupsCell.swift in Sources */,
 				B464DC7325BF4CC80020A4CE /* AppDelegate.swift in Sources */,
 				B4A6FDAB25CDE5ED00E8AAB7 /* AllGroupsCell.swift in Sources */,
+				B4FB272A25D1A7B300C4D83B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

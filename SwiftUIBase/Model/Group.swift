@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Group {
+struct Group: Equatable {
     var name: String
     var avatar: String
 }

@@ -37,15 +37,43 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func loginButtonPressed(_ sender: Any) {
-        let login = loginInput.text!
-        let password = passwordInput.text!
+//    @IBAction func loginButtonPressed(_ sender: Any) {
+//        let login = loginInput.text!
+//        let password = passwordInput.text!
+//
+//        if login == "admin" && password == "12345" {
+//            print("Logined!")
+//        } else {
+//            print ("Wrong login or password!")
+//        }
+//    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        if login == "admin" && password == "12345" {
-            print("Logined!")
-        } else {
-            print ("Wrong login or password!")
+        let checkResult = checkUserData()
+            
+        if !checkResult {
+            showLoginError()
         }
+        return checkResult
+    }
+    
+    func checkUserData() -> Bool {
+        guard let login = loginInput.text,
+              let password = passwordInput.text else { return false }
+        
+        if login == "admin" && password == "123456" {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func showLoginError() {
+        let alert = UIAlertController(title: "Login error", message: "Wrong login or password!", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true,completion: nil)
     }
     
     //Scroll View resize while working with keyboard

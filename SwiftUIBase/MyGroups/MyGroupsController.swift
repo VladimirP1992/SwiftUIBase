@@ -14,7 +14,8 @@ class MyGroupsController: UITableViewController {
     @IBAction func addGroup(segue: UIStoryboardSegue) {
         
         if segue.identifier == "addGroup" {
-            let allGroupsController = segue.source as! AllGroupsController
+            
+            guard let allGroupsController = segue.source as? AllGroupsController else { return }
             
             if let indexPath = allGroupsController.tableView.indexPathForSelectedRow {
                 let group = allGroupsController.groups[indexPath.row]
@@ -36,7 +37,7 @@ class MyGroupsController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        self.tableView.register(UINib(nibName: "GroupTableViewCell", bundle: nil), forCellReuseIdentifier: "groupCell")
+        self.tableView.register(UINib(nibName: "GroupTableViewCell", bundle: nil), forCellReuseIdentifier: "myGroupCell")
     }
 
     // MARK: - Table view data source
@@ -50,7 +51,7 @@ class MyGroupsController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath) as! GroupTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupCell", for: indexPath) as! GroupTableViewCell
         
         cell.groupName.text = myGroups[indexPath.row].name
         //set group avatar
@@ -75,9 +76,10 @@ class MyGroupsController: UITableViewController {
         if editingStyle == .delete {
             myGroups.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
+//        else if editingStyle == .insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//        }
     }
 
     /*

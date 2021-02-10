@@ -124,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Mg0-g2-lmJ" customClass="GroupTableViewCell" customModule="SwiftUIBase" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myGroupCell" id="Mg0-g2-lmJ" customClass="GroupTableViewCell" customModule="SwiftUIBase" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mg0-g2-lmJ" id="KrY-7d-wAr">
@@ -167,7 +167,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Rc3-f5-ybf" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="MwR-To-zqn"/>
+                                    <segue destination="Rc3-f5-ybf" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="dZb-Ow-4tr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

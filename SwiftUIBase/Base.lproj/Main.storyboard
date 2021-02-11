@@ -159,16 +159,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" id="yMm-WY-f5s" customClass="GroupTableViewCell" customModule="SwiftUIBase" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yMm-WY-f5s" customClass="GroupTableViewCell" customModule="SwiftUIBase" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yMm-WY-f5s" id="6ca-0w-xOk">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="Rc3-f5-ybf" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="dZb-Ow-4tr"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -177,6 +174,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Groups" id="r8S-Rd-AVO"/>
+                    <connections>
+                        <segue destination="Rc3-f5-ybf" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="ukc-p4-mvB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYX-Ch-5g5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Rc3-f5-ybf" userLabel="Exit" sceneMemberID="exit"/>

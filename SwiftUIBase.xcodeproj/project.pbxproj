@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4285DC725D8028E00A3E3B0 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4285DC625D8028E00A3E3B0 /* LikeControl.swift */; };
+		B4285DCA25D8043D00A3E3B0 /* LikeControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4285DC925D8043D00A3E3B0 /* LikeControl.xib */; };
 		B464DC7325BF4CC80020A4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464DC7225BF4CC80020A4CE /* AppDelegate.swift */; };
 		B464DC7725BF4CC80020A4CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464DC7625BF4CC80020A4CE /* ViewController.swift */; };
 		B464DC7A25BF4CC80020A4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B464DC7825BF4CC80020A4CE /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B4285DC625D8028E00A3E3B0 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		B4285DC925D8043D00A3E3B0 /* LikeControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeControl.xib; sourceTree = "<group>"; };
 		B464DC6F25BF4CC80020A4CE /* SwiftUIBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B464DC7225BF4CC80020A4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B464DC7625BF4CC80020A4CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				B4D2803325D2F32100D8AA91 /* AvatarView.swift */,
+				B4285DC625D8028E00A3E3B0 /* LikeControl.swift */,
+				B4285DC925D8043D00A3E3B0 /* LikeControl.xib */,
 			);
 			path = MyView;
 			sourceTree = "<group>";
@@ -216,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4285DCA25D8043D00A3E3B0 /* LikeControl.xib in Resources */,
 				B464DC7F25BF4CC80020A4CE /* LaunchScreen.storyboard in Resources */,
 				B4A6FDBD25CDE6EA00E8AAB7 /* FriendCell.xib in Resources */,
 				B4A6FDC525CDE79400E8AAB7 /* FriendsListCell.xib in Resources */,
@@ -241,6 +248,7 @@
 				B4A6FDBC25CDE6EA00E8AAB7 /* FriendCell.swift in Sources */,
 				B4A6FDC425CDE79400E8AAB7 /* FriendsListCell.swift in Sources */,
 				B464DC7725BF4CC80020A4CE /* ViewController.swift in Sources */,
+				B4285DC725D8028E00A3E3B0 /* LikeControl.swift in Sources */,
 				B464DC7325BF4CC80020A4CE /* AppDelegate.swift in Sources */,
 				B4FB273625D1B15F00C4D83B /* GroupTableViewCell.swift in Sources */,
 				B4FB272A25D1A7B300C4D83B /* User.swift in Sources */,

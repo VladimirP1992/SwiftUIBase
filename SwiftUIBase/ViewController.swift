@@ -35,18 +35,6 @@ class ViewController: UIViewController {
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-
-
-//    @IBAction func loginButtonPressed(_ sender: Any) {
-//        let login = loginInput.text!
-//        let password = passwordInput.text!
-//
-//        if login == "admin" && password == "12345" {
-//            print("Logined!")
-//        } else {
-//            print ("Wrong login or password!")
-//        }
-//    }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         

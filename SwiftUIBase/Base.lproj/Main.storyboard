@@ -114,6 +114,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="EcV-a1-NLg"/>
                     <connections>
+                        <outlet property="likeTestButton" destination="b8r-4b-9CJ" id="7Hd-YJ-u2B"/>
                         <outlet property="loginInput" destination="axv-HL-AAj" id="p8H-LI-VkV"/>
                         <outlet property="passwordInput" destination="Phc-9H-3vm" id="kCr-YD-3re"/>
                         <outlet property="scrollView" destination="aqj-iH-yFK" id="O9S-in-TYb"/>

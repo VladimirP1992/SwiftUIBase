@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LikeControl: UIControl {
+final class LikeControl: UIControl {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var likesCounterLabel: UILabel!
@@ -33,7 +33,15 @@ class LikeControl: UIControl {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
-    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+    override var isHighlighted: Bool {
+        didSet {
+            if self.isHighlighted != oldValue {
+                self.likeImage.alpha = self.isHighlighted ? 0.7 : 1
+            }
+        }
+    }
+    
+    func onTap() {
         likedByMe = !likedByMe
 
         if likedByMe {
@@ -41,8 +49,6 @@ class LikeControl: UIControl {
         } else {
             like()
         }
-
-        return true
     }
     
     private func like () {

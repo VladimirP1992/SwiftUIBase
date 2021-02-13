@@ -12,12 +12,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var likeTestButton: LikeControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let hideKeyboardGesture = UITapGestureRecognizer (target: self, action: #selector(hideKeyboard))
         
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
+        
+        self.likeTestButton.addTarget(self, action: #selector(handleLikeTap), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,6 +88,10 @@ class ViewController: UIViewController {
     
     @objc func hideKeyboard() {
         scrollView?.endEditing(true)
+    }
+    
+    @objc func handleLikeTap() {
+        self.likeTestButton.onTap()
     }
     
 }

@@ -23,6 +23,8 @@
 		B4A6FDC425CDE79400E8AAB7 /* FriendsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A6FDC225CDE79400E8AAB7 /* FriendsListCell.swift */; };
 		B4A6FDC525CDE79400E8AAB7 /* FriendsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A6FDC325CDE79400E8AAB7 /* FriendsListCell.xib */; };
 		B4D2803425D2F32100D8AA91 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D2803325D2F32100D8AA91 /* AvatarView.swift */; };
+		B4DB5B3C25DAEEF600D6D8F2 /* FriendsListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB5B3B25DAEEF600D6D8F2 /* FriendsListSectionHeader.swift */; };
+		B4DB5B3F25DAEFBA00D6D8F2 /* FriendsListSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DB5B3E25DAEFBA00D6D8F2 /* FriendsListSectionHeader.xib */; };
 		B4FB272A25D1A7B300C4D83B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FB272925D1A7B300C4D83B /* User.swift */; };
 		B4FB272D25D1A7C700C4D83B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FB272C25D1A7C600C4D83B /* Group.swift */; };
 		B4FB273625D1B15F00C4D83B /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FB273425D1B15F00C4D83B /* GroupTableViewCell.swift */; };
@@ -48,6 +50,8 @@
 		B4A6FDC225CDE79400E8AAB7 /* FriendsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListCell.swift; sourceTree = "<group>"; };
 		B4A6FDC325CDE79400E8AAB7 /* FriendsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsListCell.xib; sourceTree = "<group>"; };
 		B4D2803325D2F32100D8AA91 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		B4DB5B3B25DAEEF600D6D8F2 /* FriendsListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListSectionHeader.swift; sourceTree = "<group>"; };
+		B4DB5B3E25DAEFBA00D6D8F2 /* FriendsListSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsListSectionHeader.xib; sourceTree = "<group>"; };
 		B4FB272925D1A7B300C4D83B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B4FB272C25D1A7C600C4D83B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		B4FB273425D1B15F00C4D83B /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				B4A6FDBF25CDE76D00E8AAB7 /* FriendsListController.swift */,
 				B4A6FDC225CDE79400E8AAB7 /* FriendsListCell.swift */,
 				B4A6FDC325CDE79400E8AAB7 /* FriendsListCell.xib */,
+				B4DB5B3B25DAEEF600D6D8F2 /* FriendsListSectionHeader.swift */,
+				B4DB5B3E25DAEFBA00D6D8F2 /* FriendsListSectionHeader.xib */,
 			);
 			path = FriendsList;
 			sourceTree = "<group>";
@@ -224,6 +230,7 @@
 			files = (
 				B4285DCA25D8043D00A3E3B0 /* LikeControl.xib in Resources */,
 				B464DC7F25BF4CC80020A4CE /* LaunchScreen.storyboard in Resources */,
+				B4DB5B3F25DAEFBA00D6D8F2 /* FriendsListSectionHeader.xib in Resources */,
 				B4A6FDBD25CDE6EA00E8AAB7 /* FriendCell.xib in Resources */,
 				B4A6FDC525CDE79400E8AAB7 /* FriendsListCell.xib in Resources */,
 				B464DC7C25BF4CC80020A4CE /* Assets.xcassets in Resources */,
@@ -241,6 +248,7 @@
 			files = (
 				B4A6FDC025CDE76D00E8AAB7 /* FriendsListController.swift in Sources */,
 				B4D2803425D2F32100D8AA91 /* AvatarView.swift in Sources */,
+				B4DB5B3C25DAEEF600D6D8F2 /* FriendsListSectionHeader.swift in Sources */,
 				B4A6FDA725CDE59D00E8AAB7 /* AllGroupsController.swift in Sources */,
 				B4A6FDB825CDE6C800E8AAB7 /* FriendController.swift in Sources */,
 				B4FB272D25D1A7C700C4D83B /* Group.swift in Sources */,

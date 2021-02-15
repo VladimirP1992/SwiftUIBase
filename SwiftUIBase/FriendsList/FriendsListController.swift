@@ -10,8 +10,12 @@ import UIKit
 class FriendsListController: UITableViewController {
 
     var friends = [
-        User(name: "Vladimir", surname: "Ivanov", avatar: "vladimir_ava"),
-        User(name: "Olga", surname: "Petrova", avatar: "olga_ava")
+        User(name: "Olga", surname: "Petrova", avatar: "female_avatar"),
+        User(name: "Vladimir", surname: "Ivanov", avatar: "male_avatar"),
+        User(name: "Alexey", surname: "Barkov", avatar: "male_avatar"),
+        User(name: "Dmitriy", surname: "Stepanov", avatar: "male_avatar"),
+        User(name: "Evgenia", surname: "Marchuk", avatar: "female_avatar"),
+        User(name: "Viktoria", surname: "Klisheva", avatar: "female_avatar")
     ]
     
     override func viewDidLoad() {
@@ -24,6 +28,11 @@ class FriendsListController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.tableView.register(UINib(nibName: "FriendsListCell", bundle: nil), forCellReuseIdentifier: "friendsListCell")
+        
+        self.tableView.register(UINib(nibName: "FriendsListSectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "friendsListSectionHeader")
+        
+        friends.sort { $0 < $1 }
+        
     }
 
     // MARK: - Table view data source
@@ -54,6 +63,8 @@ class FriendsListController: UITableViewController {
         vc.navigationItem.title = "\(friends[indexPath.row].name) \(friends[indexPath.row].surname)"
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
     
     /*
     // Override to support conditional editing of the table view.

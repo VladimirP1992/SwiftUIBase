@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct User: Equatable {
+struct User: Equatable, Comparable {
     var name: String
     var surname: String
     var avatar: String
+    
+    static func < (lhs: User, rhs: User) -> Bool {
+        return lhs.surname < rhs.surname
+    }
 }

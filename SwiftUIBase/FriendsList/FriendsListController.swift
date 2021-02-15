@@ -32,6 +32,7 @@ class FriendsListController: UITableViewController {
         self.tableView.register(UINib(nibName: "FriendsListSectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "friendsListSectionHeader")
         
         friends.sort { $0 < $1 }
+        //make sections by first letter of surname here
         
     }
 

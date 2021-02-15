@@ -12,12 +12,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var likeTestButton: LikeControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let hideKeyboardGesture = UITapGestureRecognizer (target: self, action: #selector(hideKeyboard))
         
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
+        
+        self.likeTestButton.addTarget(self, action: #selector(handleLikeTap), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,18 +40,6 @@ class ViewController: UIViewController {
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-
-
-//    @IBAction func loginButtonPressed(_ sender: Any) {
-//        let login = loginInput.text!
-//        let password = passwordInput.text!
-//
-//        if login == "admin" && password == "12345" {
-//            print("Logined!")
-//        } else {
-//            print ("Wrong login or password!")
-//        }
-//    }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
@@ -95,6 +88,10 @@ class ViewController: UIViewController {
     
     @objc func hideKeyboard() {
         scrollView?.endEditing(true)
+    }
+    
+    @objc func handleLikeTap() {
+        self.likeTestButton.onTap()
     }
     
 }

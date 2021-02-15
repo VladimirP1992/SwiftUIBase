@@ -41,7 +41,7 @@ class FriendsListController: UITableViewController {
 
         let fullName = "\(friends[indexPath.row].name) \(friends[indexPath.row].surname)"
         cell.friendName.text = fullName
-        cell.friendAvatar.image = UIImage(named: friends[indexPath.row].avatar)
+        cell.friendAvatar.imageView.image = UIImage(named: friends[indexPath.row].avatar)
 
         return cell
     }

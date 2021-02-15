@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4285DC725D8028E00A3E3B0 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4285DC625D8028E00A3E3B0 /* LikeControl.swift */; };
+		B4285DCA25D8043D00A3E3B0 /* LikeControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4285DC925D8043D00A3E3B0 /* LikeControl.xib */; };
 		B464DC7325BF4CC80020A4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464DC7225BF4CC80020A4CE /* AppDelegate.swift */; };
 		B464DC7725BF4CC80020A4CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464DC7625BF4CC80020A4CE /* ViewController.swift */; };
 		B464DC7A25BF4CC80020A4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B464DC7825BF4CC80020A4CE /* Main.storyboard */; };
@@ -20,6 +22,7 @@
 		B4A6FDC025CDE76D00E8AAB7 /* FriendsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A6FDBF25CDE76D00E8AAB7 /* FriendsListController.swift */; };
 		B4A6FDC425CDE79400E8AAB7 /* FriendsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A6FDC225CDE79400E8AAB7 /* FriendsListCell.swift */; };
 		B4A6FDC525CDE79400E8AAB7 /* FriendsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A6FDC325CDE79400E8AAB7 /* FriendsListCell.xib */; };
+		B4D2803425D2F32100D8AA91 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D2803325D2F32100D8AA91 /* AvatarView.swift */; };
 		B4FB272A25D1A7B300C4D83B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FB272925D1A7B300C4D83B /* User.swift */; };
 		B4FB272D25D1A7C700C4D83B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FB272C25D1A7C600C4D83B /* Group.swift */; };
 		B4FB273625D1B15F00C4D83B /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FB273425D1B15F00C4D83B /* GroupTableViewCell.swift */; };
@@ -27,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B4285DC625D8028E00A3E3B0 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		B4285DC925D8043D00A3E3B0 /* LikeControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeControl.xib; sourceTree = "<group>"; };
 		B464DC6F25BF4CC80020A4CE /* SwiftUIBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B464DC7225BF4CC80020A4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B464DC7625BF4CC80020A4CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		B4A6FDBF25CDE76D00E8AAB7 /* FriendsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListController.swift; sourceTree = "<group>"; };
 		B4A6FDC225CDE79400E8AAB7 /* FriendsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListCell.swift; sourceTree = "<group>"; };
 		B4A6FDC325CDE79400E8AAB7 /* FriendsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsListCell.xib; sourceTree = "<group>"; };
+		B4D2803325D2F32100D8AA91 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		B4FB272925D1A7B300C4D83B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B4FB272C25D1A7C600C4D83B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		B4FB273425D1B15F00C4D83B /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 		B464DC7125BF4CC80020A4CE /* SwiftUIBase */ = {
 			isa = PBXGroup;
 			children = (
+				B4D2803225D2F2BF00D8AA91 /* MyView */,
 				B4FB272F25D1AFD000C4D83B /* GroupCell */,
 				B4FB272825D1A79600C4D83B /* Model */,
 				B4A6FDA525CDE11400E8AAB7 /* AllGroups */,
@@ -128,6 +135,16 @@
 				B4A6FDA625CDE59D00E8AAB7 /* AllGroupsController.swift */,
 			);
 			path = AllGroups;
+			sourceTree = "<group>";
+		};
+		B4D2803225D2F2BF00D8AA91 /* MyView */ = {
+			isa = PBXGroup;
+			children = (
+				B4D2803325D2F32100D8AA91 /* AvatarView.swift */,
+				B4285DC625D8028E00A3E3B0 /* LikeControl.swift */,
+				B4285DC925D8043D00A3E3B0 /* LikeControl.xib */,
+			);
+			path = MyView;
 			sourceTree = "<group>";
 		};
 		B4FB272825D1A79600C4D83B /* Model */ = {
@@ -205,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4285DCA25D8043D00A3E3B0 /* LikeControl.xib in Resources */,
 				B464DC7F25BF4CC80020A4CE /* LaunchScreen.storyboard in Resources */,
 				B4A6FDBD25CDE6EA00E8AAB7 /* FriendCell.xib in Resources */,
 				B4A6FDC525CDE79400E8AAB7 /* FriendsListCell.xib in Resources */,
@@ -222,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4A6FDC025CDE76D00E8AAB7 /* FriendsListController.swift in Sources */,
+				B4D2803425D2F32100D8AA91 /* AvatarView.swift in Sources */,
 				B4A6FDA725CDE59D00E8AAB7 /* AllGroupsController.swift in Sources */,
 				B4A6FDB825CDE6C800E8AAB7 /* FriendController.swift in Sources */,
 				B4FB272D25D1A7C700C4D83B /* Group.swift in Sources */,
@@ -229,6 +248,7 @@
 				B4A6FDBC25CDE6EA00E8AAB7 /* FriendCell.swift in Sources */,
 				B4A6FDC425CDE79400E8AAB7 /* FriendsListCell.swift in Sources */,
 				B464DC7725BF4CC80020A4CE /* ViewController.swift in Sources */,
+				B4285DC725D8028E00A3E3B0 /* LikeControl.swift in Sources */,
 				B464DC7325BF4CC80020A4CE /* AppDelegate.swift in Sources */,
 				B4FB273625D1B15F00C4D83B /* GroupTableViewCell.swift in Sources */,
 				B4FB272A25D1A7B300C4D83B /* User.swift in Sources */,
@@ -378,7 +398,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3TX8XZJAK;
 				INFOPLIST_FILE = SwiftUIBase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -387,6 +409,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.geekbrains.SwiftUIBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -397,7 +420,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3TX8XZJAK;
 				INFOPLIST_FILE = SwiftUIBase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +431,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.geekbrains.SwiftUIBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -14,7 +14,8 @@ class MyGroupsController: UITableViewController {
     @IBAction func addGroup(segue: UIStoryboardSegue) {
         
         if segue.identifier == "addGroup" {
-            let allGroupsController = segue.source as! AllGroupsController
+            
+            guard let allGroupsController = segue.source as? AllGroupsController else { return }
             
             if let indexPath = allGroupsController.tableView.indexPathForSelectedRow {
                 let group = allGroupsController.groups[indexPath.row]
@@ -75,9 +76,10 @@ class MyGroupsController: UITableViewController {
         if editingStyle == .delete {
             myGroups.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
+//        else if editingStyle == .insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//        }
     }
 
     /*

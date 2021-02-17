@@ -12,8 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    @IBOutlet weak var likeTestButton: LikeControl!
-    
+    let testLikeButton = LikeControl ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +21,9 @@ class ViewController: UIViewController {
         
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
         
-        self.likeTestButton.addTarget(self, action: #selector(handleLikeTap), for: .touchUpInside)
+        //Testing custom LikeControl
+        self.view.addSubview(self.testLikeButton)
+        self.testLikeButton.addTarget(self, action: #selector(self.handleLikeTap), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +40,9 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        //Testing custom LikeControl
+        self.testLikeButton.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -91,7 +95,7 @@ class ViewController: UIViewController {
     }
     
     @objc func handleLikeTap() {
-        self.likeTestButton.onTap()
+        self.testLikeButton.onTap()
     }
     
 }

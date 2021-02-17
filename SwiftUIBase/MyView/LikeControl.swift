@@ -8,29 +8,40 @@
 import UIKit
 
 final class LikeControl: UIControl {
-    
-    @IBOutlet var contentView: UIView!
-    @IBOutlet weak var likesCounterLabel: UILabel!
-    @IBOutlet weak var likeImage: UIImageView!
+      
+    let likesCounterLabel = UILabel()
+    let likeImage = UIImageView()
     
     var likedByMe: Bool = false
     var likeCounter: Int = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+        
+        self.addSubview(self.likeImage)
+        self.addSubview(likesCounterLabel)
+        
+        if likedByMe {
+            self.likeImage.image = UIImage(systemName: "heart.fill")
+        }
+        else {
+            self.likeImage.image = UIImage(systemName: "heart")
+        }
+        self.likesCounterLabel.text = "\(likeCounter)"
+        
+        self.likeImage.translatesAutoresizingMaskIntoConstraints = false
+        self.likeImage.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        self.likeImage.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.likeImage.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        
+        self.likesCounterLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.likesCounterLabel.leadingAnchor.constraint(equalTo: self.likeImage.trailingAnchor, constant: 5).isActive = true
+        self.likesCounterLabel.centerYAnchor.constraint(equalTo: self.likeImage.centerYAnchor).isActive = true
+        self.likesCounterLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 5).isActive = true
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    private func commonInit() {
-        Bundle.main.loadNibNamed("LikeControl", owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override var isHighlighted: Bool {

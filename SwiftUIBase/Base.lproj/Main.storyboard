@@ -61,10 +61,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8r-4b-9CJ" customClass="LikeControl" customModule="SwiftUIBase" customModuleProvider="target">
-                                                <rect key="frame" x="272" y="344" width="137" height="74"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -72,16 +68,12 @@
                                             <constraint firstItem="axv-HL-AAj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="kgD-r2-S8D" secondAttribute="leading" constant="108" id="5pU-rJ-Ubi"/>
                                             <constraint firstItem="NHF-0Q-JeE" firstAttribute="top" secondItem="kgD-r2-S8D" secondAttribute="top" constant="100" id="HHG-WE-tp6"/>
                                             <constraint firstItem="had-hT-pMU" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="KcS-U0-oJ9"/>
-                                            <constraint firstAttribute="trailing" secondItem="b8r-4b-9CJ" secondAttribute="trailing" constant="5" id="Mhu-ob-deV"/>
-                                            <constraint firstItem="b8r-4b-9CJ" firstAttribute="top" secondItem="Phc-9H-3vm" secondAttribute="bottom" constant="24" id="NGV-1O-TtC"/>
                                             <constraint firstItem="qBF-1N-cUT" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="OV2-zn-1Ua"/>
-                                            <constraint firstItem="b8r-4b-9CJ" firstAttribute="leading" secondItem="qBF-1N-cUT" secondAttribute="trailing" constant="36.5" id="Pn2-dS-9By"/>
                                             <constraint firstItem="axv-HL-AAj" firstAttribute="top" secondItem="had-hT-pMU" secondAttribute="bottom" constant="20" id="R5G-Ds-Fof"/>
                                             <constraint firstItem="NHF-0Q-JeE" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="RiB-fg-Pve"/>
                                             <constraint firstItem="NHF-0Q-JeE" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="TEF-TP-rTg"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Phc-9H-3vm" secondAttribute="trailing" constant="107" id="Xcu-6J-oi3"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="axv-HL-AAj" secondAttribute="trailing" constant="106" id="YnK-ia-dwV"/>
-                                            <constraint firstAttribute="bottom" secondItem="b8r-4b-9CJ" secondAttribute="bottom" constant="34" id="Zdc-YD-kxc"/>
                                             <constraint firstItem="had-hT-pMU" firstAttribute="top" secondItem="NHF-0Q-JeE" secondAttribute="bottom" constant="20" id="aoi-ga-GI5"/>
                                             <constraint firstItem="pIP-x8-al8" firstAttribute="top" secondItem="axv-HL-AAj" secondAttribute="bottom" constant="20" id="dbb-r1-ku8"/>
                                             <constraint firstAttribute="bottom" secondItem="qBF-1N-cUT" secondAttribute="bottom" constant="50" id="esU-c3-AzX"/>
@@ -114,7 +106,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="EcV-a1-NLg"/>
                     <connections>
-                        <outlet property="likeTestButton" destination="b8r-4b-9CJ" id="7Hd-YJ-u2B"/>
                         <outlet property="loginInput" destination="axv-HL-AAj" id="p8H-LI-VkV"/>
                         <outlet property="passwordInput" destination="Phc-9H-3vm" id="kCr-YD-3re"/>
                         <outlet property="scrollView" destination="aqj-iH-yFK" id="O9S-in-TYb"/>

@@ -7,71 +7,83 @@
 
 import UIKit
 
+@IBDesignable
 final class LikeControl: UIControl {
       
-    let likesCounterLabel = UILabel()
-    let likeImage = UIImageView()
+    private var imageView: UIImageView!
+    private var likesCounterLabel: UILabel!
     
-    var likedByMe: Bool = false
-    var likeCounter: Int = 0
+    private var heartImage: UIImage {
+        return likedByMe ? UIImage(systemName: "heart.fill")! : UIImage(systemName: "heart")!
+    }
+    
+    private var likeCounter: Int = 0
+    private var likedByMe: Bool = false {
+        didSet{
+            imageView.image = heartImage
+            oldValue ? unlike() : like()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.addSubview(self.likeImage)
-        self.addSubview(likesCounterLabel)
-        
-        if likedByMe {
-            self.likeImage.image = UIImage(systemName: "heart.fill")
-        }
-        else {
-            self.likeImage.image = UIImage(systemName: "heart")
-        }
-        self.likesCounterLabel.text = "\(likeCounter)"
-        
-        self.likeImage.translatesAutoresizingMaskIntoConstraints = false
-        self.likeImage.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        self.likeImage.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.likeImage.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        
-        self.likesCounterLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.likesCounterLabel.leadingAnchor.constraint(equalTo: self.likeImage.trailingAnchor, constant: 5).isActive = true
-        self.likesCounterLabel.centerYAnchor.constraint(equalTo: self.likeImage.centerYAnchor).isActive = true
-        self.likesCounterLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 5).isActive = true
+        setup()
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        setup()
+    }
+    
+    private func setup() {
+        //Likes counter label
+        self.likesCounterLabel = UILabel()
+        self.likesCounterLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(self.likesCounterLabel)
+        //Like image
+        self.imageView = UIImageView()
+        self.imageView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(self.imageView)
+        
+        
+        self.likesCounterLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        self.likesCounterLabel.centerYAnchor.constraint(equalTo: self.imageView.centerYAnchor).isActive = true
+        self.likesCounterLabel.trailingAnchor.constraint(equalTo: self.imageView.leadingAnchor, constant: 5).isActive = true
+        
+        self.likesCounterLabel.text = "\(likeCounter)"
+        
+        self.imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        self.imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.imageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        
+        self.imageView.image = heartImage
+        self.imageView.contentMode = .scaleAspectFit
+        
+        self.addTarget(self, action: #selector(touchUpInside), for: .touchUpInside)
+        print("Setup finished")
     }
     
     override var isHighlighted: Bool {
         didSet {
             if self.isHighlighted != oldValue {
-                self.likeImage.alpha = self.isHighlighted ? 0.7 : 1
+                self.imageView.alpha = self.isHighlighted ? 0.7 : 1
             }
         }
     }
     
-    func onTap() {
-        likedByMe = !likedByMe
-
-        if likedByMe {
-            unlike()
-        } else {
-            like()
-        }
+    @objc func touchUpInside() {
+        likedByMe.toggle()
+        print(likedByMe)
     }
     
     private func like () {
-        likeImage.image = UIImage(systemName: "heart.fill")
         likeCounter += 1
-        likesCounterLabel.text = "\(likeCounter)"
+        self.likesCounterLabel.text = "\(likeCounter)"
         
     }
     private func unlike () {
-        likeImage.image = UIImage(systemName: "heart")
         likeCounter -= 1
-        likesCounterLabel.text = "\(likeCounter)"
+        self.likesCounterLabel.text = "\(likeCounter)"
     }
     
 }

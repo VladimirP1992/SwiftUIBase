@@ -7,7 +7,6 @@
 
 import UIKit
 
-@IBDesignable
 final class LikeControl: UIControl {
       
     private var imageView: UIImageView!
@@ -59,8 +58,7 @@ final class LikeControl: UIControl {
         self.imageView.image = heartImage
         self.imageView.contentMode = .scaleAspectFit
         
-        self.addTarget(self, action: #selector(touchUpInside), for: .touchUpInside)
-        print("Setup finished")
+        self.addTarget(self, action: #selector(touchUpInside), for: .touchDown)
     }
     
     override var isHighlighted: Bool {
@@ -73,7 +71,6 @@ final class LikeControl: UIControl {
     
     @objc func touchUpInside() {
         likedByMe.toggle()
-        print(likedByMe)
     }
     
     private func like () {

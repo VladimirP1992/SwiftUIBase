@@ -84,6 +84,5 @@ class ViewController: UIViewController {
     @objc func hideKeyboard() {
         scrollView?.endEditing(true)
     }
-    
 }
 

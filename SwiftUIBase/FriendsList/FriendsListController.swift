@@ -15,7 +15,8 @@ class FriendsListController: UITableViewController {
         User(name: "Alexey", surname: "Barkov", avatar: "male_avatar"),
         User(name: "Dmitriy", surname: "Stepanov", avatar: "male_avatar"),
         User(name: "Evgenia", surname: "Marchuk", avatar: "female_avatar"),
-        User(name: "Viktoria", surname: "Klisheva", avatar: "female_avatar")
+        User(name: "Viktoria", surname: "Klisheva", avatar: "female_avatar"),
+        User(name: "Anna", surname: "Stepanova", avatar: "female_avatar")
     ]
     
     var friendsSectionsTittles: [String] = [String]()
@@ -62,7 +63,7 @@ class FriendsListController: UITableViewController {
         }
         
         //add last section if exists
-        if friendsInSections.last != currentSection {
+        if friendsSectionsTittles.last != currentSectionLetter {
             friendsSectionsTittles.append(currentSectionLetter)
             friendsInSections.append(currentSection)
         }
@@ -82,6 +83,7 @@ class FriendsListController: UITableViewController {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "friendsListSectionHeader") as! FriendsListSectionHeader
         
         header.firstLetterOfSurnameLabel.text = friendsSectionsTittles[section]
+        header.alpha = 0.5
         
         return header
     }

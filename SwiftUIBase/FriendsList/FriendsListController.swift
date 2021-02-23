@@ -18,6 +18,7 @@ class FriendsListController: UITableViewController {
         User(name: "Viktoria", surname: "Klisheva", avatar: "female_avatar"),
         User(name: "Anna", surname: "Stepanova", avatar: "female_avatar")
     ]
+    var filteredFriends = [User] ()
     
     var friendsSectionsTittles: [String] = [String]()
     var friendsInSections: [[User]] = [[User]]()
@@ -36,19 +37,33 @@ class FriendsListController: UITableViewController {
         self.tableView.register(UINib(nibName: "FriendsListSectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "friendsListSectionHeader")
         
         friends.sort { $0 < $1 }
-        parseFriendsToSections()
+        parseFriendsToSections(source: self.friends)
         
+        self.tableView.keyboardDismissMode = .onDrag
+        
+        let searchBar = UISearchBar(
+            frame: CGRect(
+                origin: .zero,
+                size: CGSize(width: UIScreen.main.bounds.width, height: 44)
+            )
+        )
+        searchBar.delegate = self
+        self.tableView.tableHeaderView = searchBar
     }
     
-    private func parseFriendsToSections() {
-        guard !friends.isEmpty else { return }
+    private func parseFriendsToSections(source: [User]) {
         
         //prepare for first section
-        var currentSectionLetter = friends[0].surname.prefix(1).uppercased()
+        self.friendsSectionsTittles.removeAll()
+        self.friendsInSections.removeAll()
+        
+        guard !source.isEmpty else { return }
+        
+        var currentSectionLetter = source[0].surname.prefix(1).uppercased()
         var currentSection = [User] ()
         
         //make sections
-        for friend in friends {
+        for friend in source {
             let friendSurnameLetter = friend.surname.prefix(1).uppercased()
             
             if friendSurnameLetter == currentSectionLetter {
@@ -154,4 +169,22 @@ class FriendsListController: UITableViewController {
     }
     */
 
+}
+
+extension FriendsListController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        guard !searchText.isEmpty else {
+            self.parseFriendsToSections(source: self.friends)
+            self.tableView.reloadData()
+            return
+        }
+        
+        let lowercasedSearchText = searchText.lowercased()
+        self.filteredFriends = self.friends.filter {
+            $0.surname.lowercased().contains(lowercasedSearchText) || $0.name.lowercased().contains(lowercasedSearchText)
+        }
+        self.parseFriendsToSections(source: filteredFriends)
+        self.tableView.reloadData()
+    }
 }

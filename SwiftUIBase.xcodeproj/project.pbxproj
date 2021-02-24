@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B40BA16D25E6CF8C00B22299 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BA16C25E6CF8C00B22299 /* NewsTableViewController.swift */; };
 		B4285DC725D8028E00A3E3B0 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4285DC625D8028E00A3E3B0 /* LikeControl.swift */; };
 		B464DC7325BF4CC80020A4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464DC7225BF4CC80020A4CE /* AppDelegate.swift */; };
 		B464DC7725BF4CC80020A4CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464DC7625BF4CC80020A4CE /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B40BA16C25E6CF8C00B22299 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		B4285DC625D8028E00A3E3B0 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		B464DC6F25BF4CC80020A4CE /* SwiftUIBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B464DC7225BF4CC80020A4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B40BA16B25E6CF3500B22299 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				B40BA16C25E6CF8C00B22299 /* NewsTableViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		B464DC6625BF4CC80020A4CE = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 		B464DC7125BF4CC80020A4CE /* SwiftUIBase */ = {
 			isa = PBXGroup;
 			children = (
+				B40BA16B25E6CF3500B22299 /* News */,
 				B4D2803225D2F2BF00D8AA91 /* MyView */,
 				B4FB272F25D1AFD000C4D83B /* GroupCell */,
 				B4FB272825D1A79600C4D83B /* Model */,
@@ -250,6 +261,7 @@
 				B4FB272D25D1A7C700C4D83B /* Group.swift in Sources */,
 				B4A6FDB525CDE68900E8AAB7 /* MyGroupsController.swift in Sources */,
 				B4A6FDBC25CDE6EA00E8AAB7 /* FriendCell.swift in Sources */,
+				B40BA16D25E6CF8C00B22299 /* NewsTableViewController.swift in Sources */,
 				B4A6FDC425CDE79400E8AAB7 /* FriendsListCell.swift in Sources */,
 				B464DC7725BF4CC80020A4CE /* ViewController.swift in Sources */,
 				B4285DC725D8028E00A3E3B0 /* LikeControl.swift in Sources */,

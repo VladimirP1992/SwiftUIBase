@@ -61,28 +61,20 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-WY-hlq" customClass="LikeControl" customModule="SwiftUIBase" customModuleProvider="target">
-                                                <rect key="frame" x="255.5" y="365" width="137.5" height="32"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Phc-9H-3vm" firstAttribute="top" secondItem="pIP-x8-al8" secondAttribute="bottom" constant="20" id="4iq-tT-yaB"/>
                                             <constraint firstItem="axv-HL-AAj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="kgD-r2-S8D" secondAttribute="leading" constant="108" id="5pU-rJ-Ubi"/>
-                                            <constraint firstAttribute="bottom" secondItem="LVC-WY-hlq" secondAttribute="bottom" constant="55" id="AnX-b9-fc5"/>
                                             <constraint firstItem="NHF-0Q-JeE" firstAttribute="top" secondItem="kgD-r2-S8D" secondAttribute="top" constant="100" id="HHG-WE-tp6"/>
                                             <constraint firstItem="had-hT-pMU" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="KcS-U0-oJ9"/>
                                             <constraint firstItem="qBF-1N-cUT" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="OV2-zn-1Ua"/>
                                             <constraint firstItem="axv-HL-AAj" firstAttribute="top" secondItem="had-hT-pMU" secondAttribute="bottom" constant="20" id="R5G-Ds-Fof"/>
                                             <constraint firstItem="NHF-0Q-JeE" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="RiB-fg-Pve"/>
                                             <constraint firstItem="NHF-0Q-JeE" firstAttribute="centerX" secondItem="kgD-r2-S8D" secondAttribute="centerX" id="TEF-TP-rTg"/>
-                                            <constraint firstItem="LVC-WY-hlq" firstAttribute="leading" secondItem="qBF-1N-cUT" secondAttribute="trailing" constant="20" id="Tnc-VP-E2O"/>
-                                            <constraint firstAttribute="trailing" secondItem="LVC-WY-hlq" secondAttribute="trailing" constant="21" id="U4r-d7-8zy"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Phc-9H-3vm" secondAttribute="trailing" constant="107" id="Xcu-6J-oi3"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="axv-HL-AAj" secondAttribute="trailing" constant="106" id="YnK-ia-dwV"/>
                                             <constraint firstItem="had-hT-pMU" firstAttribute="top" secondItem="NHF-0Q-JeE" secondAttribute="bottom" constant="20" id="aoi-ga-GI5"/>
-                                            <constraint firstItem="LVC-WY-hlq" firstAttribute="top" secondItem="Phc-9H-3vm" secondAttribute="bottom" constant="45" id="ck7-hU-RFc"/>
                                             <constraint firstItem="pIP-x8-al8" firstAttribute="top" secondItem="axv-HL-AAj" secondAttribute="bottom" constant="20" id="dbb-r1-ku8"/>
                                             <constraint firstAttribute="bottom" secondItem="qBF-1N-cUT" secondAttribute="bottom" constant="50" id="esU-c3-AzX"/>
                                             <constraint firstItem="qBF-1N-cUT" firstAttribute="top" secondItem="Phc-9H-3vm" secondAttribute="bottom" constant="40" id="hYD-DQ-xHz"/>
@@ -353,8 +345,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat-photo" translatesAutoresizingMaskIntoConstraints="NO" id="jny-E1-Gb6">
-                                <rect key="frame" x="10" y="54" width="394" height="608"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jny-E1-Gb6">
+                                <rect key="frame" x="10" y="55.5" width="394" height="604.5"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f0O-bf-oh5"/>
@@ -392,7 +384,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cat-photo" width="1024" height="640"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="person.2" catalog="system" width="128" height="81"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="plus" catalog="system" width="128" height="113"/>

@@ -69,7 +69,7 @@
                 <outlet property="friendAvatar" destination="PGj-fB-kBP" id="sYB-c6-dyL"/>
                 <outlet property="friendName" destination="RrR-IK-4py" id="Umm-VB-zyR"/>
             </connections>
-            <point key="canvasLocation" x="138" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LikeControl: UIControl {
+final class LikeButton: UIControl {
       
     private var imageView: UIImageView!
     private var likesCounterLabel: UILabel!
@@ -44,19 +44,19 @@ final class LikeControl: UIControl {
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.imageView)
         
-        
-        self.likesCounterLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        self.likesCounterLabel.centerYAnchor.constraint(equalTo: self.imageView.centerYAnchor).isActive = true
-        self.likesCounterLabel.trailingAnchor.constraint(equalTo: self.imageView.leadingAnchor, constant: 5).isActive = true
-        
-        self.likesCounterLabel.text = "\(likeCounter)"
-        
-        self.imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        self.imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         self.imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         self.imageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.imageView.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        self.imageView.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         self.imageView.image = heartImage
         self.imageView.contentMode = .scaleAspectFit
+        
+        self.likesCounterLabel.leadingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: 2).isActive = true
+        self.likesCounterLabel.centerYAnchor.constraint(equalTo: self.imageView.centerYAnchor).isActive = true
+        
+        self.likesCounterLabel.text = "\(likeCounter)"
         
         self.addTarget(self, action: #selector(touchUpInside), for: .touchDown)
     }

@@ -21,6 +21,7 @@ final class LikeButton: UIControl {
         didSet{
             imageView.image = heartImage
             oldValue ? unlike() : like()
+            animatedLikesChange()
         }
     }
     
@@ -75,12 +76,17 @@ final class LikeButton: UIControl {
     
     private func like () {
         likeCounter += 1
-        self.likesCounterLabel.text = "\(likeCounter)"
-        
     }
     private func unlike () {
         likeCounter -= 1
-        self.likesCounterLabel.text = "\(likeCounter)"
+    }
+    private func animatedLikesChange() {
+        UIView.transition(with: self.likesCounterLabel,
+                          duration: 0.25,
+                          options: .transitionFlipFromLeft,
+                          animations: {
+                            self.likesCounterLabel.text = "\(self.likeCounter)"
+                          }, completion: nil)
     }
     
 }
